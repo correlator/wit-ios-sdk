@@ -165,7 +165,8 @@ static const CGFloat kMicMargin = 40.0f;
     CABasicAnimation* growAnim = [CABasicAnimation animation];
     growAnim.duration = growDuration;
     growAnim.keyPath = @"radius";
-    growAnim.fromValue = self.innerCircleView.radius;
+    growAnim.fromValue = @(self.innerCircleView.radius.floatValue * 1.25f);
+
     growAnim.toValue = newRadius;
     growAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
 
